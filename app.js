@@ -9,25 +9,18 @@ function DeckCreator(source, name) {
 
 }
 var deckArray = [];
-
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
-new DeckCreator('https://via.placeholder.com/200', 'name');
+for (var i = 0; i < 2; i ++){
+new DeckCreator('https://via.placeholder.com/100', 'name');
+new DeckCreator('https://via.placeholder.com/100', 'name');
+new DeckCreator('https://via.placeholder.com/100', 'name');
+new DeckCreator('https://via.placeholder.com/100', 'name');
+new DeckCreator('https://via.placeholder.com/100', 'name');
+new DeckCreator('https://via.placeholder.com/100', 'name');
+new DeckCreator('https://via.placeholder.com/100', 'name');
+new DeckCreator('https://via.placeholder.com/100', 'name');
 
 
+}
 
 function displayDeck (){
     console.log('test');
