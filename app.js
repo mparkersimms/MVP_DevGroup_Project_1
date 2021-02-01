@@ -20,20 +20,38 @@ new DeckCreator('https://lh3.googleusercontent.com/pw/ACtC-3esKj2XX_9ZVlK0ruOav0
 new DeckCreator('https://lh3.googleusercontent.com/pw/ACtC-3cPfbUwbYPMszbs_odsZlO8-o6x-yPeDQ7dYHnSwGk9rii2bs4VZaRahe4UAeCdTOMRzYw2ty9Wr0FLxhX-uPSAhhULnapEbGJXmM3w6PSvmSiIDZ-LBF3cIETac4r56w75liKXdSklJJViEwl9mlKDTg=w412-h420-no?authuser=0', 'honestwerk');
 new DeckCreator('https://lh3.googleusercontent.com/pw/ACtC-3cAaUdF7AvJug9htB5CLNCwtnnkYhiSZVdwOEL4m0fbjb43SUaxROq4rg7_VFfdwMVdL8op6ej-tMYPrXa1TlIrChESE2uT6istKbuxAjit4ftzE68SMcaqev2YaS1JRoAWoUSIM6a-Uh4fdnm2ADys=w680-h393-no?authuser=0', 'kyloandbbyo');
 new DeckCreator('https://lh3.googleusercontent.com/pw/ACtC-3cbOl1RJMNLlf-eZ-v_h1m98bParOOJ2i7hvAzcyDuu4hjaY9Or8gUnMHw3MCsIjQCQQYsMPaiC7E_nPUvFAP2J0b7Qmt9rG5seYv5hukCuMPhmh7IqW3SqaTBYhWDNSJ34RACPpGOmv2Rpn4Nsf22g=w1044-h927-no?authuser=0', 'monkeysaur');
-
-
 }
+
+
+
 
 function displayDeck (){
     console.log('test');
-    var deckElement = document.getElementById('deck');
     for (var i = 0; i < deckArray.length; i++){
+
+      var deckElement = document.getElementById('deck');
+
+      var cardElement = document.createElement('div');
+      
+      var frontElement = document.createElement('div');
+      
+      cardElement.class = 'card-container';
+      frontElement.class = 'front';
+      deckElement.appendChild(cardElement);
+      cardElement.appendChild(frontElement);
+    
         var imageElement = document.createElement('img');
         imageElement.src = deckArray[i].source;
-        deckElement.appendChild(imageElement);
+        cardElement.appendChild(imageElement);
     }
 }
 
 displayDeck();
 
+function displayCard(){
 
+
+
+
+
+}
