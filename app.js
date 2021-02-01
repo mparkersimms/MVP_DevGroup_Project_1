@@ -31,18 +31,25 @@ function displayDeck (){
 
       var deckElement = document.getElementById('deck');
 
-      var cardElement = document.createElement('div');
+      var cardOuterElement = document.createElement('div');
+      
+      var cardInnerElement = document.createElement('div');
       
       var frontElement = document.createElement('div');
       
-      cardElement.class = 'card-container';
-      frontElement.class = 'front';
-      deckElement.appendChild(cardElement);
-      cardElement.appendChild(frontElement);
+      var imageElement = document.createElement('img');
+
+      cardOuterElement.classList.add('card-outer');
+      frontElement.classList.add('front');
+      cardInnerElement.classList.add('card-inner');
+
+      deckElement.appendChild(cardOuterElement);
+      cardOuterElement.appendChild(cardInnerElement);
+      cardInnerElement.appendChild(frontElement);
+      cardInnerElement.appendChild(imageElement);
     
-        var imageElement = document.createElement('img');
-        imageElement.src = deckArray[i].source;
-        cardElement.appendChild(imageElement);
+      imageElement.src = deckArray[i].source;
+    
     }
 }
 
