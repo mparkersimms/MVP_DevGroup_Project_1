@@ -71,13 +71,55 @@ function displayDeck (){
 }
 
 displayDeck();
+var roundCount = 0;
 var flippedCards = [];
+var numFlipped = 0;
+console.log(numFlipped);
 function flipCard(){
     console.log(event.target.id);
     flippedCards.push(event.target.id);
     this.classList.add('show');
-
+    numFlipped++;
+    console.log(flippedCards);
+    while(numFlipped == 2){
+      console.log('test length');
+      compareCards();
+      break;
+    }
 }
+
+
+function compareCards(){
+  console.log(flippedCards);
+  if (flippedCards[0]==flippedCards[1]){
+    matchedCards();
+  }else{
+    unmatchedCards();
+  }
+  roundCount++;
+    }
+    
+  function matchedCards(){
+    numFlipped = 0;
+    flippedCards = [];
+    // displayDeck();
+  }
+  function unmatchedCards(){
+    setTimeout(function(){
+      var cardOne = document.getElementById(flippedCards[0]);
+      var cardTwo = document.getElementById(flippedCards[1]);
+      console.log(cardOne);
+      console.log(cardTwo);
+      cardOne.parentElement.classList.remove('show');
+      cardTwo.parentElement.classList.remove('show');
+      console.log(flippedCards);
+      flippedCards = [];
+    },1100);
+    numFlipped = 0;
+  // displayDeck();
+}
+
+
 // for (var i = 0; i < deckArray.length; i ++){
 //     deckArray[i].addEventListener('click',flipCard);
 // }
