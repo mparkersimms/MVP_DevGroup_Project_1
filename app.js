@@ -105,6 +105,7 @@ function compareCards(){
     // displayDeck();
   }
   function unmatchedCards(){
+    disableClicks();
     setTimeout(function(){
       var cardOne = document.getElementById(flippedCards[0]);
       var cardTwo = document.getElementById(flippedCards[1]);
@@ -114,11 +115,22 @@ function compareCards(){
       cardTwo.parentElement.classList.remove('show');
       console.log(flippedCards);
       flippedCards = [];
+      enableClicks();
     },1100);
+    
+    console.log('why?');
     numFlipped = 0;
   // displayDeck();
+};
+function enableClicks(){
+  console.log('enable');
+  var deck = document.getElementById('deck');
+  deck.classList.remove('disabled');
 }
-
+function disableClicks(){
+  var deck = document.getElementById('deck');
+  deck.classList.add('disabled');
+}
 
 // for (var i = 0; i < deckArray.length; i ++){
 //     deckArray[i].addEventListener('click',flipCard);

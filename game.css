@@ -57,3 +57,6 @@
     transform: rotateY(180deg);
 }
 
+.disabled{
+    pointer-events: none;
+}
