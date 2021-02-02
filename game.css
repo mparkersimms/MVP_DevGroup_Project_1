@@ -27,6 +27,8 @@
 .show{
     transform: rotateY(180deg);
     transition: 2s;
+    pointer-events: none;
+
 }
 
 .card-outer img{
