@@ -21,11 +21,23 @@ new DeckCreator('https://lh3.googleusercontent.com/pw/ACtC-3cPfbUwbYPMszbs_odsZl
 new DeckCreator('https://lh3.googleusercontent.com/pw/ACtC-3cAaUdF7AvJug9htB5CLNCwtnnkYhiSZVdwOEL4m0fbjb43SUaxROq4rg7_VFfdwMVdL8op6ej-tMYPrXa1TlIrChESE2uT6istKbuxAjit4ftzE68SMcaqev2YaS1JRoAWoUSIM6a-Uh4fdnm2ADys=w680-h393-no?authuser=0', 'kyloandbbyo');
 new DeckCreator('https://lh3.googleusercontent.com/pw/ACtC-3cbOl1RJMNLlf-eZ-v_h1m98bParOOJ2i7hvAzcyDuu4hjaY9Or8gUnMHw3MCsIjQCQQYsMPaiC7E_nPUvFAP2J0b7Qmt9rG5seYv5hukCuMPhmh7IqW3SqaTBYhWDNSJ34RACPpGOmv2Rpn4Nsf22g=w1044-h927-no?authuser=0', 'monkeysaur');
 }
-
+console.log(deckArray);
+function deckShuffle(deckArray){
+    console.log(deckArray);
+    for (var i = deckArray.length - 1; i > 0; i--) {
+      var randomPosition = Math.floor(Math.random() * (i + 1));
+      var currentPosition = deckArray[i];
+      var newPosition = deckArray[randomPosition];
+      deckArray[i] = newPosition;
+      deckArray[randomPosition] = currentPosition;
+    };
+    return deckArray;
+  };
 
 
 
 function displayDeck (){
+    deckShuffle(deckArray);
     console.log('test');
     for (var i = 0; i < deckArray.length; i++){
 
@@ -43,29 +55,45 @@ function displayDeck (){
       frontElement.classList.add('front');
       cardInnerElement.classList.add('card-inner');
 
+      frontElement.setAttribute('id', deckArray[i].name);
+
       deckElement.appendChild(cardOuterElement);
       cardOuterElement.appendChild(cardInnerElement);
       cardInnerElement.appendChild(frontElement);
       cardInnerElement.appendChild(imageElement);
     
       imageElement.src = deckArray[i].source;
+      cardInnerElement.addEventListener('click',flipCard);
+        // console.log('test');
+    ;
     
     }
 }
 
-// displayDeck();
+displayDeck();
+var flippedCards = [];
+function flipCard(){
+    console.log(event.target.id);
+    flippedCards.push(event.target.id);
+    this.classList.add('show');
 
-function displayCard(){
 }
+// for (var i = 0; i < deckArray.length; i ++){
+//     deckArray[i].addEventListener('click',flipCard);
+// }
 
 
-var formElement = document.getElementById('form');
-formElement.addEventListener('submit', function(event){
-  console.log('test');
-  event.preventDefault();
-  console.log(event.target['name-field'].value);
-  var userName = event.target['name-field'].value;
-  console.log(userName);
-  var nameAsAString = JSON.stringify(userName);
-  localStorage.setItem('name', nameAsAString);
-});
+// var formElement = document.getElementById('form');
+// formElement.addEventListener('submit', function(event){
+//   console.log('test');
+//   event.preventDefault();
+//   console.log(event.target['name-field'].value);
+//   var userName = event.target['name-field'].value;
+//   console.log(userName);
+//   var nameAsAString = JSON.stringify(userName);
+//   localStorage.setItem('name', nameAsAString);
+// });
+
+// function showCard(event) {
+//     event.target
+// }
