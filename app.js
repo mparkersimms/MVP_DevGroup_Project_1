@@ -121,10 +121,25 @@ function compareCards(){
     cardOne[1].parentElement.classList.remove('show');
     numFlipped = 0;
     flippedCards = [];
+    
+    var gameWin = document.getElementsByClassName('matched');
+    console.log(gameWin.length)
+    if(gameWin.length == 16){
+      var win = document.getElementById('deck');
+      win.style.display = 'none';
+      var button = document.getElementById('button');
+      button.style.display = 'inline-block';
+    
+
+      
+    }
     // displayDeck();
   }
+  
   function unmatchedCards(){
     disableClicks();
+    
+    
     setTimeout(function(){
       var test = document.getElementsByClassName('show');
       console.log(test[0]);
