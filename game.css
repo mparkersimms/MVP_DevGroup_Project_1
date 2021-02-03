@@ -10,7 +10,8 @@
   }
 
 body {
-    background-color:#DCE1DE
+    background-color:#DCE1DE;
+    min-height: 900px;
 }
 header {
     text-align:center;
@@ -38,14 +39,15 @@ a {
 }
 h1 {
     margin:auto;
-    font-size: 70px;
+    font-size: 110px;
     font-family: 'Amatic SC', cursive;
-    padding-right:150px;
+    padding-left:15px;
+    padding-right:165px;
 }
 #home-page {
     display:flex;
     flex-direction: column;
-    height:500px;
+    height:650px;
 }
 #home-page div {
     margin:auto;
@@ -57,6 +59,10 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20pt;
     line-height: 29pt;
+    background-color:rgba(157, 196, 161, 0.5);
+    padding:10px;
+    border-radius:10px;    
+    border: 1px solid rgb(135, 167, 138);
 }
 #form {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -67,6 +73,9 @@ h1 {
 fieldset {
     padding-top:15px;
     border-radius: 5px;
+    background-color:rgba(157, 196, 161, 0.5);
+    border: 1px solid rgb(129, 162, 132);
+
 }
 #entergame {    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -75,6 +84,7 @@ fieldset {
     
 }
 #entergame a { 
+    
     margin:auto;
 }
 
@@ -88,15 +98,23 @@ fieldset {
     font-size: 20pt;
     border-radius: 5px;
 }
+#navbar {
+    margin-top:50px;
+    text-align: center;
+    min-width: 700px;
+}
 h2 {
+    display:inline-block;
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-size: 50px;
-    margin-bottom: 10px;
-    margin-top:10px;
+    margin: 10px 50px;
+    
+    
 }
 #deck {
-    background-color:#666c68 ;
+
+    background-color:#808782;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -110,15 +128,28 @@ h2 {
     margin-bottom: 70px;
 
 }
+#results-button {
+    display:none;
+    height:500px;
+}
+#results-button a {
+    margin:auto;
+}
 
+#button{
+    background-color: #e1ab88;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    border-radius: 5px;
+} 
 .card-outer {
     background-color: rgb(23, 23, 23);
     width: 125px;
     height: 125px;    
     perspective: 1000px;
     border-radius: 5px;
-    box-shadow: inset 1px 1px 15px 5px black;
-    box-shadow: 1px 1px 15px 5px black;
+    /* box-shadow: inset 1px 1px 15px 5px black; */
+    /* box-shadow: 1px 1px 15px 2px black; */
 
     
 }
@@ -127,9 +158,9 @@ h2 {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: 2s;
+    transition: 1s;
     transform-style: preserve-3d;
-    border: 1px solid #330C2F;
+    /* border: 1px solid #330C2F; */
     border-radius: 5px;
 }
 /* .card-outer:hover .card-inner{
@@ -144,7 +175,7 @@ h2 {
 }
 .matched{
     transform: rotateY(180deg);
-    transition: 2s;
+    transition: 1s;
     pointer-events: none;
 
 }
@@ -163,16 +194,15 @@ h2 {
     height: 100%;  
     backface-visibility: hidden;
     border-radius: 5px;
+    border: 1.5px solid rgb(80, 106, 82);
+    text-align: center;
+    font-size: 72pt;
+    color: #CA895F; 
+    background-color: rgb(141, 184, 145);
+    /* pointer-events: none; */
 
 }
 
-.front {
-    background-color: #8B2635;
-    color: #9CC5A1;
-    /* transform: rotateY(180deg); */
-    
-    
-}
 .card-inner img{
     transform: rotateY(180deg);
 }
@@ -181,9 +211,34 @@ h2 {
     pointer-events: none;
 }
 #button{
-    display: none;
+    
 }
 footer {
+    /* position:absolute;
+    left:34%;
+    bottom:0; */
+    margin-top:auto;
     text-align: center;
     font-family:'Amatic SC';
+}
+#results-page {
+    text-align: center;
+    height:650px;
+}
+#results-page a button{
+    background-color: #e1ab88;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    border-radius: 5px;
+}
+#results p {
+    width:900px;
+    margin:auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    line-height: 29pt;
+    background-color:rgba(157, 196, 161, 0.5);
+    padding:10px;
+    border-radius:10px;    
+    border: 1px solid rgb(135, 167, 138);
 }
