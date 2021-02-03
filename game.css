@@ -1,9 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+/* latin */
+@font-face {
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/amaticsc/v15/TUZ3zwprpvBS1izr_vOMscGKfrUC_2fi-Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
 body {
     background-color:#DCE1DE
 }
+header {
+    text-align:center;
+    display:flex;
+    min-width: 943px;
+    margin-top:30px;
+}
+header img {
+    width:150px;
+    height:150px;
+}
+a {
+    text-decoration: none;
+    font-family:'Amatic SC';
+    font-size:45px;
+    padding:10px;
+    color: #4e6756 ;
+}
+#home {
+    margin:auto;
+    font-size: 110px;
+    font-family: 'Amatic SC', cursive;
+    padding-right:165px;
+    padding-left:15px;
+}
+h1 {
+    margin:auto;
+    font-size: 70px;
+    font-family: 'Amatic SC', cursive;
+    padding-right:150px;
+}
+#home-page {
+    display:flex;
+    flex-direction: column;
+    height:500px;
+}
+#home-page div {
+    margin:auto;
+    
+}
+#home-page p {
+    width:900px;
+    margin:auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    line-height: 29pt;
+}
+#form {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    
+    
+}
+fieldset {
+    padding-top:15px;
+    border-radius: 5px;
+}
+#entergame {    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    display:flex;
+    
+}
+#entergame a { 
+    margin:auto;
+}
 
+#name-field {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+}
+#enter-button {
+    background-color: #e1ab88;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    border-radius: 5px;
+}
+h2 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
 #deck {
-    background-color:#5F6D64 ;
+    background-color:#666c68 ;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -12,15 +105,21 @@ body {
     width: 600px;
     border-radius: 10px;
     margin:auto;
-    shadow: 5px, 5px, 5px, 5px black;
+    border:2px solid black;
+    box-shadow: 3px 3px 25px 5px black;
+    margin-bottom: 70px;
 
 }
 
 .card-outer {
-    background-color: transparent;
+    background-color: rgb(23, 23, 23);
     width: 125px;
     height: 125px;    
     perspective: 1000px;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 15px 5px black;
+    box-shadow: 1px 1px 15px 5px black;
+
     
 }
 
@@ -39,7 +138,7 @@ body {
 } */
 .show{
     transform: rotateY(180deg);
-    transition: 2s;
+    transition: 1s;
     pointer-events: none;
 
 }
@@ -63,6 +162,7 @@ body {
     width: 100%;
     height: 100%;  
     backface-visibility: hidden;
+    border-radius: 5px;
 
 }
 
@@ -82,4 +182,8 @@ body {
 }
 #button{
     display: none;
+}
+footer {
+    text-align: center;
+    font-family:'Amatic SC';
 }
