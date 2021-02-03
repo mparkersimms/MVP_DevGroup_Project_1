@@ -1,16 +1,27 @@
+body {
+    background-color:#DCE1DE
+}
+
 #deck {
+    background-color:#5F6D64 ;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
+    padding: 30px;
+    width: 600px;
+    border-radius: 10px;
+    margin:auto;
+    shadow: 5px, 5px, 5px, 5px black;
+
 }
 
 .card-outer {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid white;
+    width: 125px;
+    height: 125px;    
     perspective: 1000px;
+    
 }
 
 .card-inner {
@@ -19,6 +30,8 @@
     height: 100%;
     transition: 2s;
     transform-style: preserve-3d;
+    border: 1px solid #330C2F;
+    border-radius: 5px;
 }
 /* .card-outer:hover .card-inner{
     transform: rotateY(180deg);
@@ -42,6 +55,7 @@
     width: 100%;
     height: 100%;  
     backface-visibility: hidden;
+    border-radius: 5px;
 
 }
 .front {
@@ -53,8 +67,8 @@
 }
 
 .front {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #8B2635;
+    color: #9CC5A1;
     /* transform: rotateY(180deg); */
     
     

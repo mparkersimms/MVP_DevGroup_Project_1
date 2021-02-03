@@ -88,7 +88,7 @@ function compareCards(){
     
     var gameWin = document.getElementsByClassName('matched');
     console.log(gameWin.length)
-    if(gameWin.length == 2){
+    if(gameWin.length == 16){
       var win = document.getElementById('deck');
       win.style.display = 'none';
       var button = document.getElementById('button');
@@ -119,7 +119,7 @@ function compareCards(){
       console.log(flippedCards);
       flippedCards = [];
       enableClicks();
-    },1100);
+    },1500);
     
     console.log('why?');
     numFlipped = 0;
