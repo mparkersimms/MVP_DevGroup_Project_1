@@ -19,6 +19,7 @@ function displayDeck (){
       var frontElement = document.createElement('div');
       
       var imageElement = document.createElement('img');
+    //   frontElement.textContent = "?";
 
       cardOuterElement.classList.add('card-outer');
       frontElement.classList.add('front');
@@ -88,14 +89,13 @@ function compareCards(){
     
     var gameWin = document.getElementsByClassName('matched');
     console.log(gameWin.length)
-    if(gameWin.length == 16){
+    if(gameWin.length == 2){
+        setTimeout(function(){
       var win = document.getElementById('deck');
       win.style.display = 'none';
-      var button = document.getElementById('button');
-      button.style.display = 'inline-block';
-    
-
-      
+      var resultsButton = document.getElementById('results-button');
+      resultsButton.style.display = 'flex'; 
+    },1500);
     }
     // displayDeck();
   }
@@ -119,7 +119,7 @@ function compareCards(){
       console.log(flippedCards);
       flippedCards = [];
       enableClicks();
-    },1500);
+    },1200);
     
     console.log('why?');
     numFlipped = 0;
