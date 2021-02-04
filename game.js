@@ -89,7 +89,7 @@ function compareCards(){
     
     var gameWin = document.getElementsByClassName('matched');
     console.log(gameWin.length)
-    if(gameWin.length == 2){
+    if(gameWin.length == 4){
         setTimeout(function(){
       var win = document.getElementById('deck');
       win.style.display = 'none';
