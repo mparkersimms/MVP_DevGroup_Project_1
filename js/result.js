@@ -1,4 +1,5 @@
 "use strict";
+//The congratulatory message uses the username and round count from local storage to display the message to the user
 
 var userNameFromLocalStorage = localStorage.getItem('name');
 var userName = JSON.parse(userNameFromLocalStorage);

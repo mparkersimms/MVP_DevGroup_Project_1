@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-/* latin */
+
 @font-face {
     font-family: 'Amatic SC';
     font-style: normal;
@@ -13,16 +13,19 @@ body {
     background-color:#DCE1DE;
     min-height: 900px;
 }
+
 header {
     text-align:center;
     display:flex;
     min-width: 943px;
     margin-top:30px;
 }
+
 header img {
     width:150px;
     height:150px;
 }
+
 a {
     text-decoration: none;
     font-family:'Amatic SC';
@@ -30,6 +33,7 @@ a {
     padding:10px;
     color: #4e6756 ;
 }
+
 #home {
     margin:auto;
     font-size: 110px;
@@ -37,6 +41,7 @@ a {
     padding-right:165px;
     padding-left:15px;
 }
+
 h1 {
     margin:auto;
     font-size: 110px;
@@ -44,15 +49,17 @@ h1 {
     padding-left:15px;
     padding-right:165px;
 }
+
 #home-page {
     display:flex;
     flex-direction: column;
     height:650px;
 }
+
 #home-page div {
-    margin:auto;
-    
+    margin:auto;    
 }
+
 #home-page p {
     width:900px;
     margin:auto;
@@ -64,27 +71,26 @@ h1 {
     border-radius:10px;    
     border: 1px solid rgb(135, 167, 138);
 }
+
 #form {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20pt;
-    
-    
+    font-size: 20pt;  
 }
+
 fieldset {
     padding-top:15px;
     border-radius: 5px;
     background-color:rgba(157, 196, 161, 0.5);
     border: 1px solid rgb(129, 162, 132);
-
 }
+
 #entergame {    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20pt;
-    display:flex;
-    
+    display:flex;    
 }
-#entergame a { 
-    
+
+#entergame a {    
     margin:auto;
 }
 
@@ -92,6 +98,7 @@ fieldset {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20pt;
 }
+
 #enter-button {
     background-color: #e1ab88;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -100,25 +107,26 @@ fieldset {
     transition-duration:0.2s;
     cursor:pointer;
 }
+
 #enter-button:hover {
     transform:scale3d(1.05,1.05,1.05);
 }
+
 #navbar {
     margin-top:50px;
     text-align: center;
     min-width: 700px;
 }
+
 h2 {
     display:inline-block;
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-size: 50px;
-    margin: 10px 50px;
-    
-    
+    margin: 10px 50px;   
 }
-#deck {
 
+#deck {
     background-color:#808782;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -131,12 +139,13 @@ h2 {
     border:2px solid black;
     box-shadow: 3px 3px 25px 5px black;
     margin-bottom: 70px;
-
 }
+
 #results-button {
     display:none;
     height:500px;
 }
+
 #results-button a {
     margin:auto;
 }
@@ -148,16 +157,13 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
 } 
+
 .card-outer {
     background-color: rgb(23, 23, 23);
     width: 125px;
     height: 125px;    
     perspective: 1000px;
-    border-radius: 5px;
-    /* box-shadow: inset 1px 1px 15px 5px black; */
-    /* box-shadow: 1px 1px 15px 2px black; */
-
-    
+    border-radius: 5px;        
 }
 
 .card-inner {
@@ -166,20 +172,16 @@ h2 {
     height: 100%;
     transition: 1s;
     transform-style: preserve-3d;
-    /* border: 1px solid #330C2F; */
     border-radius: 5px;
     cursor: pointer;
 }
-/* .card-outer:hover .card-inner{
-    transform: rotateY(180deg);
-    transition: 2s;
-} */
+
 .show{
     transform: rotateY(180deg);
     transition: 1s;
     pointer-events: none;
-
 }
+
 .matched{
     transform: rotateY(180deg);
     transition: 1s;
@@ -187,7 +189,6 @@ h2 {
     animation-name: matched;
     animation-delay: .5s;
     animation-duration: .5s;
-
 }
 
 .card-outer img{
@@ -196,8 +197,8 @@ h2 {
     height: 100%;  
     backface-visibility: hidden;
     border-radius: 5px;
-
 }
+
 .front {
     position: absolute;
     width: 100%;
@@ -209,8 +210,6 @@ h2 {
     font-size: 72pt;
     color: #CA895F; 
     background-color: rgb(141, 184, 145);
-    /* pointer-events: none; */
-
 }
 
 .card-inner img{
@@ -221,33 +220,33 @@ h2 {
     pointer-events: none;
 }
 
-
 button {
     transition-duration:0.2s;
     cursor:pointer;
 }
+
 button:hover {
-    transform: scale3d(1.05,1.05,1.05);
-    
+    transform: scale3d(1.05,1.05,1.05);    
 }
+
 footer {
-    /* position:absolute;
-    left:34%;
-    bottom:0; */
     margin-top:auto;
     text-align: center;
     font-family:'Amatic SC';
 }
+
 #results-page {
     text-align: center;
     height:650px;
 }
+
 #results-page a button{
     background-color: #e1ab88;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20pt;
     border-radius: 5px;
 }
+
 #results p {
     width:900px;
     margin:auto;
@@ -268,6 +267,7 @@ footer {
     100% {transform:scale3d(1,1,1);
     }
 }
+
 @keyframes hovered {
     0% {transform:scale3d(1,1,1);
     }
