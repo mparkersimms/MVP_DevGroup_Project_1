@@ -88,7 +88,7 @@ function matchedCards(){
   //This if statement determines when the game ends by matching all the cards in the deck 
 
   var gameWin = document.getElementsByClassName('matched');
-  if(gameWin.length == 4){
+  if(gameWin.length == 16){
       setTimeout(function(){
     var win = document.getElementById('deck');
     win.style.display = 'none';
